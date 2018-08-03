@@ -1,0 +1,64 @@
+<!--
+  Generated template for the AboutPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar >
+    <ion-title style="text-align: center">Search City</ion-title>
+    <ion-searchbar color="danger" [(ngModel)]="City" (search)="search()"></ion-searchbar>
+    <ion-item>
+      <ion-label></ion-label>
+      <ion-select [(ngModel)]="unit">
+        <ion-option [value]="k">Kelvins</ion-option>
+        <ion-option [value]="f">Farenheight</ion-option>
+        <ion-option [value]="c">celsius</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <div class="container">
+    <ion-grid *ngIf="myWeather">
+      
+      <img class="condition-image" src="{{conditionCode}}">
+      <br>
+      <ion-row>
+        <ion-col>
+          <h4 class="nme"> {{myWeather?.name}}</h4>
+        </ion-col>
+      </ion-row>
+      <h2>Today</h2>
+      <ion-row>
+        <ion-col>
+          <h4 class="temp_label"> {{temperatureMain}} &#8451;</h4>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <h4> {{myWeather?.weather[0].description }}</h4>
+        </ion-col>
+      </ion-row>
+      <div class="left">
+        <ion-row>
+          <ion-col>
+            <h4></h4>
+            <h4>min: {{temp_min}} &#8451;</h4>
+          </ion-col>
+        </ion-row>
+      </div>
+      <div class="right">
+        <ion-row>
+          <ion-col>
+            <h4></h4>
+            <h4>max: {{temp_max}}&#8451;</h4>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-grid>
+  </div>
+</ion-content>

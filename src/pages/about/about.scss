@@ -1,0 +1,66 @@
+page-about {
+    ion-content{
+        background-color: rgb(25, 103, 185) !important;
+
+       
+    }
+
+    ion-title{
+        background-color: rgb(25, 103, 185) !important;
+        color: aliceblue
+    }
+   
+        
+    
+.container{
+
+    float: left;
+    color: white;
+    margin-bottom: -17%;
+    width: 100%;
+    margin: 0;
+    background-color: rgb(84, 164, 250) !important;
+    text-align: center;
+}
+.condition-image{
+    height: 150px;
+    width: 50%;
+    left: 20px;
+    margin-left: 25%;
+}
+.temp_label{
+    font-size: 60px;
+
+    margin-top: -6%;
+}
+
+
+h2{
+    margin-top: -7%; 
+}
+
+.left{
+text-align: left;
+margin-bottom: -16%;
+}
+
+.right{
+
+    text-align: right;
+    
+}
+.nme{
+    margin-top: -15%; 
+}
+
+
+   
+    ion-searchbar{
+        background-color: rgba(0,0,0,0.2) !important;
+        width: 80%;
+        float: left;
+
+    }
+
+
+}

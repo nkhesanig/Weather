@@ -1,0 +1,94 @@
+page-start {
+    ion-content{
+        // background-image: url(../../assets/imgs/background.png) !important;
+    }
+    ion-select, ion-option, ion-item{
+        background-color: rgba(0,0,0,0) !important;
+        color: white;
+    }
+    ion-label{
+        color: white !important;
+    }
+    div{
+        color: white !important;
+        background-color: rgba(0,0,0,0) !important;
+    }
+    .scroll-content {
+        background-color: #f55848;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        
+      }
+    
+      button {
+        flex: 1;
+        width: 50%;
+      }
+      .cities{
+          width: 100%;
+          height: 300px;
+          background-color: rgba(47,143,243,1) !important;
+          border-radius: 8px; 
+      
+      }
+      h1, h2, h3{
+          text-align: center;
+          table-layout: auto;
+          width: 100%;
+      
+      }
+      .result h1,.result h2,.result h3{
+          width: 100%;
+
+      }
+      .temp{
+          font-size: 2em;
+      }
+      .image-container{
+          width: 20%;
+          margin-left: 40%;
+        //   height: 200px;
+        //   float: left;
+      }
+      .image-container img{
+          width: 100%;
+          height: 100%;
+      }
+      .info{
+          width: 30%;
+          margin-left: 35%;
+      }
+    //   .info h1{
+        
+    //   }
+      .down{
+   
+            width: 30%;
+            float: right;
+            margin-top: 7%;
+      }
+      .right{
+        width: 30%;
+        float: left;
+        margin-top: 7%;
+      }
+      ion-searchbar{
+        background-color: rgba(0,0,0,0.2) !important;
+        width: 80%;
+        float: left;
+      }
+      .searchButton{
+          float: right;
+          width: 7%;
+          height: 43px;
+
+      }
+      .symetric{
+          width: 7%;
+          float: left;
+          height: 43px;
+        //   background-image: url(../../assets/imgs/Knowledge-engineer-job-search.png) !important;
+        //   background-size: cover;
+      }
+ }

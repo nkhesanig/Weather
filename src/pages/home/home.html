@@ -1,14 +1,95 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+
+  <ion-navbar color = "primary">
+    <ion-title style="text-align: center">Weather.Com</ion-title>
   </ion-navbar>
+
 </ion-header>
 
+
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+    <ion-item >
+        <ion-label>City</ion-label>
+        <ion-select [(ngModel)]="City" (ionChange)="click()">
+          <ion-option value="Pretoria">pretoria</ion-option>
+          <ion-option value="Johannesburg">Johannesburg</ion-option>
+          <ion-option value="Durban">Durban</ion-option>
+          <ion-option value="musina">Musina</ion-option>
+        </ion-select>
+      </ion-item>
+
+
+
+  <ion-grid *ngIf="myWeather">
+
+     
+    
+ <ion-row>
+    <ion-col>
+<h3>temp</h3>
+    </ion-col>
+    <ion-col> 
+     <h4> {{myWeather?.main.temp}}&deg;</h4>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+      <ion-col> 
+<h3>pressure</h3>
+      </ion-col>
+      <ion-col>
+      <h4>  {{myWeather?.main.pressure}}</h4>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row>
+        <ion-col>
+  <h3>humidity</h3>
+        </ion-col>
+        <ion-col>
+       <h4>  {{myWeather?.main.humidity}}</h4> 
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+          <ion-col>
+    <h3>Description</h3>
+          </ion-col>
+          <ion-col>
+         <h4>  {{myWeather?.weather[0].description}}</h4> 
+          </ion-col>
+        </ion-row>
+
+     
+     
+          <ion-row>
+              <ion-col>
+        <h3>temp_min</h3>
+              </ion-col>
+              <ion-col>
+              <h4>  {{myWeather?.main.temp_min}}&deg;</h4>
+              </ion-col>
+        </ion-row>
+        
+        <ion-row>
+            <ion-col>
+      <h3>temp_max</h3>
+            </ion-col>
+            <ion-col>
+           <h4> {{myWeather?.main.temp_max}}&deg;</h4>
+            </ion-col>
+      </ion-row>
+        
+
+
+  </ion-grid>
 </ion-content>
